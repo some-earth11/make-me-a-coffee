@@ -1,8 +1,6 @@
 "use client"
 import styles from './page.module.css'
 import { useState,useEffect } from 'react';
-import dotenv from 'dotenv';
-dotenv.config();
 interface CoffeeData{
   title: string;
   description: string;
@@ -20,8 +18,7 @@ export default function Home() {
   const [data, setData] = useState<CoffeeData[] | undefined>(undefined);
 
   const getData = async () => {
-    const url = process.env.URL;
-    const resp = await fetch(`${url}`);
+    const resp = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}`);
     const json = await resp.json();
     setData(json);
   }
