@@ -1,5 +1,6 @@
 "use client"
 import styles from './page.module.css'
+import Image from 'next/image';
 import { useState,useEffect } from 'react';
 interface CoffeeData{
   title: string;
@@ -24,11 +25,20 @@ export default function Home() {
   }
 
   return (
+    <>
+    <h1 className={styles.header}>Your Coffee of the Day is ....</h1>
     <main className={styles.main}>
-      <h1 className={styles.header}>Your Coffee of the Day is ....</h1>
-      <h2 className="dataclass">
-        Data is : {data && data[1] && data[1].title}
-      </h2>
+      <div className={styles.left_main + styles.container}>
+        <Image src={""} alt="Iced"/>
+      </div>
+      <div className={styles.middle_main + styles.container}>2dsds</div>
+      <div className={styles.right_main + styles.container}>
+        <Image src={""} alt="Iced"/>
+      </div>
     </main>
+    <footer className={styles.footer}>
+        Created by some-earth
+      </footer>
+    </>
   )
 }
