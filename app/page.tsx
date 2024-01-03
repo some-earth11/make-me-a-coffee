@@ -28,12 +28,12 @@ export default function Home() {
     <>
     <h1 className={styles.header}>Your Coffee of the Day is ....</h1>
     <main className={styles.main}>
-      <div className={styles.left_main + styles.container}>
-        <Image src={""} alt="Iced"/>
+      <div className={styles.left_main}>
+        <Image src={"/hotcoffee.png"} alt="Hot" className={styles.hot} sizes="100vw" width={0} height={0}/>
       </div>
-      <div className={styles.middle_main + styles.container}>2dsds</div>
-      <div className={styles.right_main + styles.container}>
-        <Image src={""} alt="Iced"/>
+      <div className={styles.middle_main}>2dsds</div>
+      <div className={`${styles.right_main}`}>
+        <Image src={"/icedcoffee.png"} alt="Iced" className={styles.iced} sizes="100vw" width={0} height={0}/>
       </div>
     </main>
     <footer className={styles.footer}>
